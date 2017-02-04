@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<html>
+        <header>
+            <link rel="stylesheet" href="{% static 'css/new.css' %}">
+
+        </header>
+
+        <body>
+         <h1>Hello World</h1>
+         <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> </a>
+         <a href="{% url 'post_draft_list" %} class="top-menu"><span class="glyphicon glyphicon-edit"></span> </a>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        </body>
+</html>
